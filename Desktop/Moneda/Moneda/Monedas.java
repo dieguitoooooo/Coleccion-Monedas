@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class Monedas
 {
-    //aqui es donde se almacenaran mis monedas
+    //Aqui es donde se almacenaran mis monedas
     private ArrayList<Moneda> coleccionMonedas;
 
     /**
@@ -19,11 +19,27 @@ public class Monedas
         // inicializacion de mi nuevo objecto
         coleccionMonedas = new ArrayList<Moneda>();
     }
-    
+
+    /**
+     * Metodo para añadir monedas a nuestra coleccion.
+     */
     public void addMoneda(String nombre, int cantidad, int anno)
     {
-        // put your code here
+        // Aqui añado mis monedas
         coleccionMonedas.add(new Moneda(nombre, cantidad, anno));
     }
+
+    /**
+     * Muestra por pantalla todas las monedas que hay en la colección
+     */
+    public void mostrarColeccion()
+    {
+        int indice = 0;
+        while(coleccionMonedas.size() > indice){
+            System.out.println(coleccionMonedas.get(indice).getDetalles());
+            indice++;
+        }
+    }
+
 }
 

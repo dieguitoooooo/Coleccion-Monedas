@@ -11,7 +11,7 @@ public class Moneda
     private String nombre;
     private int cantidad;
     private int anno;
-
+    
     /**
      * Constructor for objects of class Moneda
      */
@@ -19,7 +19,6 @@ public class Moneda
     {
         // initialise instance variables
         setDetalles(nombre, cantidad, anno);
-
     }
 
     /**
@@ -27,7 +26,7 @@ public class Moneda
      */
     public String getDetalles()
     {
-        return nombre + ": "+ cantidad + "Año: " + anno;
+        return "Tipo: "+ nombre + ": "+ "Cantidad: "+ cantidad + " " + "Año: " + anno;
     }
 
     /**
