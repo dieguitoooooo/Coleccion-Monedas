@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Moneda
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Moneda\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=nombre\ cantidad\ anno
+comment1.target=Moneda(java.lang.String,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Moneda\r\n
+comment2.params=
+comment2.target=java.lang.String\ getDetalles()
+comment2.text=\r\n\ Metodo\ para\ conseguir\ los\ detalles\ de\ una\ moneda.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getNombre()
+comment3.text=\r\n\ Devuelve\ el\ tipo\ de\ moneda\ Euros,\ libra,\ peso,\ etc...\r\n
+comment4.params=
+comment4.target=int\ cantidad()
+comment4.text=\r\n\ Devuelve\ la\ cantidad\ de\ moneda\ 1cent,\ 2cent\ 1\u20AC\r\n
+comment5.params=
+comment5.target=int\ anno()
+comment5.text=\r\n\ Devuelve\ el\ a\u00F1o.\r\n
+comment6.params=nombre\ cantidad\ anno
+comment6.target=void\ setDetalles(java.lang.String,\ int,\ int)
+comment6.text=\r\nCon\ este\ metodo\ introducimos\ los\ detalles\ de\ una\ determinada\ moneda.\r\n
+numComments=7
