@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Write a description of class Monedas here.
@@ -41,5 +42,17 @@ public class Monedas
         }
     }
 
+    /**
+     * Metodo que elimina las monedas anteriores pasadas por parametro.
+     */
+    public void eliminaPorAnno(int annoMinimo)
+    {
+        Iterator<Moneda> ite = coleccionMonedas.iterator();
+        while(ite.hasNext()) {
+            if(ite.next().anno() < annoMinimo) {
+                ite.remove();
+            }
+        }
+    }
 }
 
