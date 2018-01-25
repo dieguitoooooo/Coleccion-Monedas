@@ -11,14 +11,15 @@ public class Moneda
     private String nombre;
     private int cantidad;
     private int anno;
-    
+    private int id;
+
     /**
      * Constructor for objects of class Moneda
      */
-    public Moneda(String nombre, int cantidad, int anno)
+    public Moneda(String nombre, int cantidad, int anno, int id)
     {
         // initialise instance variables
-        setDetalles(nombre, cantidad, anno);
+        setDetalles(nombre, cantidad, anno, id);
     }
 
     /**
@@ -26,7 +27,7 @@ public class Moneda
      */
     public String getDetalles()
     {
-        return "Tipo: "+ nombre + ": "+ "Cantidad: "+ cantidad + " " + "Año: " + anno;
+        return "Tipo: "+ nombre + ": "+ "Cantidad: "+ cantidad + " " + "Año: " + anno + " " + "Id: #" + id +"#";
     }
 
     /**
@@ -54,13 +55,22 @@ public class Moneda
     }
 
     /**
+     * Identifiacdor de cada moneda.
+     */
+    public int id()
+    {
+        return id;
+    }
+
+    /**
      *Con este metodo introducimos los detalles de una determinada moneda.
      */
-    public void setDetalles(String nombre, int cantidad, int anno)
+    public void setDetalles(String nombre, int cantidad, int anno, int id)
     {
         // put your code here
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.anno= anno;
+        this.id = id;
     }
 }

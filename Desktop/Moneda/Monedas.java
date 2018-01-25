@@ -11,6 +11,7 @@ public class Monedas
 {
     //Aqui es donde se almacenaran mis monedas
     private ArrayList<Moneda> coleccionMonedas;
+    private int id;
 
     /**
      * Constructor for objects of class Monedas
@@ -19,6 +20,7 @@ public class Monedas
     {
         // inicializacion de mi nuevo objecto
         coleccionMonedas = new ArrayList<Moneda>();
+        id = 1;
     }
 
     /**
@@ -27,7 +29,8 @@ public class Monedas
     public void addMoneda(String nombre, int cantidad, int anno)
     {
         // Aqui añado mis monedas
-        coleccionMonedas.add(new Moneda(nombre, cantidad, anno));
+        coleccionMonedas.add(new Moneda(nombre, cantidad, anno, id));
+        id++;
     }
 
     /**
@@ -48,11 +51,13 @@ public class Monedas
     public void eliminaPorAnno(int annoMinimo)
     {
         Iterator<Moneda> ite = coleccionMonedas.iterator();
-        while(ite.hasNext()) {
+        while(ite.hasNext()){
             if(ite.next().anno() < annoMinimo) {
                 ite.remove();
             }
         }
     }
+
 }
+
 
