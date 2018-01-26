@@ -52,9 +52,19 @@ public class Monedas
     {
         Iterator<Moneda> ite = coleccionMonedas.iterator();
         while(ite.hasNext()){
-            if(ite.next().anno() < annoMinimo) {
+            if(ite.next().getAnno() < annoMinimo) {
                 ite.remove();
             }
+        }
+    }
+    
+    /**
+     * Este metodo lo que hace es cambiar el tipo de moneda donde le indiquemenos en el indice
+     */
+    public void cambiaElTipoDeMoneda(int indice, String cambiarTipo)
+    {
+        if(coleccionMonedas.size() > 0){
+            coleccionMonedas.get(indice).setNombre(cambiarTipo);
         }
     }
 

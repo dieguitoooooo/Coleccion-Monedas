@@ -39,25 +39,49 @@ public class Moneda
     }
 
     /**
+     * Introducir el tipo de moneda
+     */
+    public void setNombre(String nombre)
+    {
+        this.nombre = nombre;
+    }
+
+    /**
      * Devuelve la cantidad de moneda 1cent, 2cent 1€
      */
-    public int cantidad()
+    public int getCantidad()
     {
         return cantidad;
     }
 
     /**
+     * Introducir la cantidad
+     */
+    public void setCantidad(int catidad)
+    {
+        this.cantidad = cantidad;
+    }
+
+    /**
      * Devuelve el año.
      */
-    public int anno()
+    public int getAnno()
     {
         return anno;
     }
 
     /**
+     * Introducir el año
+     */
+    public void setAnno(int anno)
+    {
+        this.anno = anno;
+    }
+
+    /**
      * Identifiacdor de cada moneda.
      */
-    public int id()
+    public int getId()
     {
         return id;
     }
