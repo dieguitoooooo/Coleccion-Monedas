@@ -11,6 +11,7 @@ public class Monedas
 {
     //Aqui es donde se almacenaran mis monedas
     private ArrayList<Moneda> coleccionMonedas;
+    // Este campo nos va servir de contador para que a cada objeto se le asigne por defecto un identificador. 
     private int id;
 
     /**
@@ -57,7 +58,7 @@ public class Monedas
             }
         }
     }
-    
+
     /**
      * Este metodo lo que hace es cambiar el tipo de moneda donde le indiquemenos en el indice
      */
@@ -68,6 +69,29 @@ public class Monedas
         }
     }
 
-}
+    /**
+     * Ordenar alfabeticamente por tipo de moneda.
+     */
+    public void ordenarSegunTipo()
+    {
+        ArrayList<Moneda> copiaColeccion = (ArrayList<Moneda>) coleccionMonedas.clone();
+        int contador = 0;
+        Moneda primera = copiaColeccion.get(0);
+        while(copiaColeccion.size() != 0){
+            while(contador < copiaColeccion.size())
+            {
+                Moneda monedaActual = copiaColeccion.get(contador);
+                if(monedaActual.getNombre().compareTo(primera.getNombre()) > 0)
+                {
+                    primera = monedaActual;
+                }
+                contador++;
+            }
+            System.out.println(primera.getDetalles());
+            //Eliminamos el objeto que hemos imprimido.
+            coleccionMonedas.remove(primera);
+        }
+    }
 
+}
 

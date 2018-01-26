@@ -7,10 +7,13 @@
  */
 public class Moneda
 {
-    // instance variables - replace the example below with your own
+    // Aqui almacenaremos el tipo de moneda.
     private String nombre;
+    // Aqui indicaremos la cantidad de monedas
     private int cantidad;
+    // Indicador de año de acuño
     private int anno;
+    // Identificador de cada moneda
     private int id;
 
     /**
