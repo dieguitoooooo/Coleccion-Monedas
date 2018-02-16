@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 /**
  * Write a description of class Monedas here.
@@ -17,11 +20,26 @@ public class Monedas
     /**
      * Constructor for objects of class Monedas
      */
-    public Monedas()
+    public Monedas(String lista)
     {
         // inicializacion de mi nuevo objecto
         coleccionMonedas = new ArrayList<Moneda>();
         id = 1;
+
+        try {
+            File dato = new File("lista.txt");
+            Scanner sc = new Scanner(dato);
+            while (sc.hasNextLine()) {
+                String c = sc.nextLine();
+                String[] cadena = (c.split(" # "));
+                addMoneda((cadena[0]), Integer.parseInt(cadena[1]),Integer.parseInt(cadena[2]));
+            }
+            sc.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 
     /**
@@ -71,27 +89,27 @@ public class Monedas
 
     /**
      * Ordenar alfabeticamente por tipo de moneda.
-     */
+     *
     public void ordenarSegunTipo()
     {
-        ArrayList<Moneda> copiaColeccion = (ArrayList<Moneda>) coleccionMonedas.clone();
-        int contador = 0;
-        Moneda primera = copiaColeccion.get(0);
-        while(copiaColeccion.size() != 0){
-            while(contador < copiaColeccion.size())
-            {
-                Moneda monedaActual = copiaColeccion.get(contador);
-                if(monedaActual.getNombre().compareTo(primera.getNombre()) > 0)
-                {
-                    primera = monedaActual;
-                }
-                contador++;
-            }
-            System.out.println(primera.getDetalles());
-            //Eliminamos el objeto que hemos imprimido.
-            coleccionMonedas.remove(primera);
-        }
+    ArrayList<Moneda> copiaColeccion = (ArrayList<Moneda>) coleccionMonedas.clone();
+    int contador = 0;
+    while(copiaColeccion.size() != 0){
+    Moneda primera = copiaColeccion.get(0);
+    while(contador < copiaColeccion.size())
+    {
+    Moneda monedaActual = copiaColeccion.get(contador);
+    if(monedaActual.getNombre().compareTo(primera.getNombre()) > 0)
+    {
+    primera = monedaActual;
     }
+    contador++;
+    }
+    System.out.println(primera.getDetalles());
+    //Eliminamos el objeto que hemos imprimido.
+    coleccionMonedas.remove(primera);
+    }
+    }*/
 
 }
 

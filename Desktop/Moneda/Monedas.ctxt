@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Monedas
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Monedas\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Monedas()
+comment1.params=lista
+comment1.target=Monedas(java.lang.String)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Monedas\r\n
 comment2.params=nombre\ cantidad\ anno
 comment2.target=void\ addMoneda(java.lang.String,\ int,\ int)
@@ -16,7 +16,4 @@ comment4.text=\r\n\ Metodo\ que\ elimina\ las\ monedas\ anteriores\ pasadas\ por
 comment5.params=indice\ cambiarTipo
 comment5.target=void\ cambiaElTipoDeMoneda(int,\ java.lang.String)
 comment5.text=\r\n\ Este\ metodo\ lo\ que\ hace\ es\ cambiar\ el\ tipo\ de\ moneda\ donde\ le\ indiquemenos\ en\ el\ indice\r\n
-comment6.params=
-comment6.target=void\ ordenarSegunTipo()
-comment6.text=\r\n\ Ordenar\ alfabeticamente\ por\ tipo\ de\ moneda.\r\n
-numComments=7
+numComments=6

@@ -16,7 +16,7 @@ public class MonedasTest2
 
     public void test1()
     {
-        Monedas moneda1 = new Monedas();
+        Monedas moneda1 = new Monedas("lista.txt");
         System.out.println("### Creamos un objeto moneda...");
         System.out.println("\n### Añadimos 4 monedas...");
         moneda1.addMoneda("Euros", 2, 1995);
